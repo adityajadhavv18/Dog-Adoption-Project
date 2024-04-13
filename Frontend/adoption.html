@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawssible - FAQs</title>
+  <!-- Add your CSS and Bootstrap CDN link here -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<header>
+  <!-- nav bar -->  
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./images/paw-icon.png" alt="Icon" class="mr-2 mb-1" width="30" height="30" style="background-color: white; padding: 5px; border-radius: 50%; margin-right: 8px;">
+        PAWSSIBLE
+      </a> 
+      <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="list.html">Adoption List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Schemes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="adoption.html">Adoption Form</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registration.html">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> 
+</header>
+
+<style>
+  body {
+background-color: #f8f9fa; /* Premium background color */
+}
+
+footer {
+background-color: #343a40; /* Dark footer background color */
+color: #fff; /* Text color for the footer */
+padding: 20px 0;
+text-align: center;
+}
+
+.dog-image-container {
+  position: absolute; /* Position the dog image absolutely */
+  top: 50%; /* Adjust top position */
+  right: 20px; /* Adjust right position */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.dog-image {
+  width: 80px; /* Adjust width */
+  height: 80px; /* Adjust height */
+  border-radius: 50%; /* Make it circular */
+}
+</style>
+
+<body>
+  <div style="height: 70px;"></div>
+
+  <div class="container mt-5">
+    <h1 class="text-center">Dog Adoption Form</h1>
+   
+    <div style="height: 60px;"> </div>
+
+    <div class="dog-image-container">
+      <img src="./images/dog_icon.jpg" alt="Dog Image" class="dog-image" style="margin-bottom: 525px; margin-right: 435px;">
+    </div> 
+
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputName" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="inputName" placeholder="Enter your name" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPhone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="inputPhone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="col-md-6" >
+        <label for="inputEmail" class="form-label" style="margin-top: 10px;">Email Address</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email address" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputBreed" class="form-label" style="margin-top: 10px;">Dog Breed</label>
+        <input type="text" class="form-control" id="inputBreed" placeholder="Enter the dog's breed" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputAge" class="form-label" style="margin-top: 10px;">Dog Age</label>
+        <input type="number" class="form-control" id="inputAge" placeholder="Enter the dog's age" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputImage" class="form-label">Dog Image URL</label>
+        <input type="url" class="form-control" id="inputImage" placeholder="Enter the dog's image URL"  style="margin-top: 10px ;">
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-dark" style="margin-top: 10px;">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div style="height: 120px;">
+
+  </div>
+  
+  <script>
+    $(document).ready(function(){
+      $('.navbar-toggler').on('click', function(){
+          $('.navbar-collapse').collapse('toggle');
+      });
+
+      $('.navbar-nav>li>a').on('click', function(){
+          $('.navbar-collapse').collapse('hide');
+      });
+
+      $(document).on('click', function(e) {
+          if (!$(e.target).closest('.navbar-collapse').length && !$(e.target).is('.navbar-toggler')) {
+              $('.navbar-collapse').collapse('hide');
+          }
+      });
+  });
+  </script>
+
+<footer class="text-body-secondary py-5">
+  <div class="container">
+    <p style="color: #e9ecef; padding-top: 15px;">&copy; 2024 Your Website. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawssible - Home</title>
+  <!-- Add your CSS and Bootstrap CDN link here -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./images/paw-icon.png" alt="Icon" class="mr-2 mb-1" width="30" height="30" style="background-color: white; padding: 5px; border-radius: 50%;">
+        PAWSSIBLE
+        </a>        
+                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="list.html">Adoption List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Schemes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adoption.html">Adoption Form</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registration.html">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    
+    
+  </header>
+
+  
+  
+  <!-- Header and navigation -->
+  
+  <section id="title" class="gradient-background">
+    <div class="container ol-xxl-8 px-4 pt-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 pt-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="./images/cutest-dog-breeds-jpg.jpg" class="d-block mx-lg-auto img-fluid border-padded" alt="Bootstrap Themes" height="200" loading="lazy" style="margin-bottom: 125px;">
+
+
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" style="padding-bottom: 0px; padding-top: 200px;">Embark on a journey with Pawsibble
+          </h1>
+          <h4 style="padding-bottom: 70px; text-align:start;">Where endless paw-sibilities await for adoption and care, making tails wag everywhere! 
+            find your perfect match </h4>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start" style="padding-bottom: 300px; padding-left: 50px;">
+            <button type="button" id="searchBtn" class="btn btn-light btn-lg px-4 me-md-2" >
+              Start searching
+            </button>
+            <button type="button" id="listBtn" class="btn btn-outline-light btn-lg px-4">
+              List a pup
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <style>
+    .border-padded {
+      padding: 20px;
+      border: 2px solid black;
+      box-sizing: border-box; /* Include padding and border in the total width and height */
+    }
+  </style>
+  
+
+  <!-- Main content section -->
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+          $('.navbar-toggler').on('click', function(){
+              $('.navbar-collapse').collapse('toggle');
+          });
+
+          $('.navbar-nav>li>a').on('click', function(){
+              $('.navbar-collapse').collapse('hide');
+          });
+
+          $(document).on('click', function(e) {
+              if (!$(e.target).closest('.navbar-collapse').length && !$(e.target).is('.navbar-toggler')) {
+                  $('.navbar-collapse').collapse('hide');
+              }
+          });
+      });
+
+      // Function to redirect to features page
+    function redirectToFeatures() {
+      window.location.href = 'list.html'; // Replace 'features-page.html' with your actual features page URL
+    }
+
+    // Function to redirect to FAQs page
+    function redirectToFAQs() {
+      window.location.href = 'adoption.html'; // Replace 'faqs-page.html' with your actual FAQs page URL
+    }
+
+    // Add click event listeners to the buttons
+    document.getElementById('searchBtn').addEventListener('click', redirectToFeatures);
+    document.getElementById('listBtn').addEventListener('click', redirectToFAQs);
+  </script>
+  
+</body>
+
+</html>

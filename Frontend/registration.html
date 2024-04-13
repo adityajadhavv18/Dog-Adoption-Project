@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Registration</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+<style>
+  body {
+    background-color: #f8f9fa; /* Premium background color */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-control {
+    border-color: #ccc;
+  }
+
+  .btn-dark {
+    background-color: #343a40;
+    border-color: #343a40;
+  }
+
+  .btn-dark:hover {
+    background-color: #272c30;
+    border-color: #272c30;
+  }
+
+  footer {
+    background-color: #343a40; /* Dark footer background color */
+    color: #fff; /* Text color for the footer */
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  footer p {
+    margin-bottom: 0;
+  }
+
+  
+  /* Other styles */
+
+  
+
+
+</style>
+
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./images/paw-icon.png" alt="Icon" class="mr-2 mb-1" width="30" height="30" style="background-color: white; padding: 5px; border-radius: 50%;">
+      PAWSSIBLE
+      </a>        
+              <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="list.html">Adoption List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Schemes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="adoption.html">Adoption Form</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registration.html">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1 class="text-center mb-4">User Registration</h1>
+      
+      <!-- Registration Form -->
+      <form id="registrationForm" class="mb-4">
+        <h3 class="text-center mb-3">Register</h3>
+        <div class="mb-3">
+          <label for="regUsername" class="form-label">Username</label>
+          <input type="text" class="form-control" id="regUsername" placeholder="Enter username" required>
+        </div>
+        <div class="mb-3">
+          <label for="regPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="regPassword" placeholder="Enter password" required>
+        </div>
+        <div class="mb-3">
+          <label for="regEmail" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="regEmail" placeholder="Enter email" required>
+        </div>
+        <button type="submit" class="btn btn-dark w-100">Register</button>
+        <p style="margin-top: 8px; margin-bottom: 1px;"> Already have an account</p>
+        <a class="nav-link" href="login.html" style="color: blue;">Login !</a>
+
+      </form>
+    </div>
+  </div>
+
+  <footer class="text-body-secondary py-5">
+    <div class="container">
+      <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    $(document).ready(function(){
+          $('.navbar-toggler').on('click', function(){
+              $('.navbar-collapse').collapse('toggle');
+          });
+
+          $('.navbar-nav>li>a').on('click', function(){
+              $('.navbar-collapse').collapse('hide');
+          });
+
+          $(document).on('click', function(e) {
+              if (!$(e.target).closest('.navbar-collapse').length && !$(e.target).is('.navbar-toggler')) {
+                  $('.navbar-collapse').collapse('hide');
+              }
+          });
+      });
+
+  </script>
+</body>
+</html>
