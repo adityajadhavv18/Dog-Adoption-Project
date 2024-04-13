@@ -167,9 +167,17 @@
           }
       });
   });
+
+
   function redirectToRegistration() {
-    // Replace 'registration.html' with the actual URL of your registration page
-    window.location.href = 'registration.html';
+
+    if(!localStorage.getItem('authToken')) {
+      // Replace 'registration.html' with the actual URL of your registration page
+      window.location.href = 'registration.html';
+    }
+    else{
+      alert("Your request has been submitted successfully!")
+    }
   }
   fetch('http://localhost:8080/api/v1/dogs/')
       .then(response => response.json())

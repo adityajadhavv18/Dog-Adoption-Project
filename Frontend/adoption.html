@@ -206,6 +206,10 @@
     <div style="height: 120px"></div>
 
     <script>
+      if (!localStorage.getItem("authToken")) {
+        // Redirect to register page if authToken does not exist
+        window.location.href = "registration.html"; // replace 'register.html' with your register page URL
+      }
       $(document).ready(function () {
         $(".navbar-toggler").on("click", function () {
           $(".navbar-collapse").collapse("toggle");
